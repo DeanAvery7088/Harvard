@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScrollingBackground : MonoBehaviour {
 
-	public float scrollSpeed = .1f;
+	public float scrollSpeed = .1f;		
 	public Renderer rend;
 
 	// Use this for initialization
@@ -13,7 +13,7 @@ public class ScrollingBackground : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		// Time.time is time since the game began, vs. deltaTime, which is time since last frame
+		// Time.time is time since the game began, vs. deltaTime, which is time since last frame		
 		float offset = Time.time * scrollSpeed;
 
 		// texture offsets shift how the texture is drawn onto the 3D object, skewing its

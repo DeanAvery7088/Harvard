@@ -4,7 +4,9 @@ using System.Collections;
 public class SkyscraperSpawner : MonoBehaviour {
 
 	public GameObject[] prefabs;
-	public static float speed = 10f;
+	// Derives the speed for the skyscrapers, coins, and the airplanes
+	// static means it belongs to the SkyscraperSpawner class, not to an individual object
+	public static float speed = 10f;					
 
 	// Use this for initialization
 	void Start () {
@@ -25,9 +27,9 @@ public class SkyscraperSpawner : MonoBehaviour {
 			Instantiate(prefabs[Random.Range(0, prefabs.Length)], new Vector3(26, Random.Range(-20, -12), 11),
 				Quaternion.Euler(-90f, 0f, 0f));
 
-			// randomly increase the speed by 1
+			// randomly increase the speed by 1			
 			if (Random.Range(1, 4) == 1) {
-				speed += 1f;
+				speed += 1f;					
 			}
 
 			// wait between 1-5 seconds for a new skyscraper to spawn

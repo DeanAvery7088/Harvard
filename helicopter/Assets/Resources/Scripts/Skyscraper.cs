@@ -16,8 +16,6 @@ public class Skyscraper : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		else {
-
-			// scroll based on SkyscraperSpawner static variable, speed
 			transform.Translate(-SkyscraperSpawner.speed * Time.deltaTime, 0, 0);
 		}
 	}

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class HeliController : MonoBehaviour {
 
-	public float speed = 10.0f;
+	public float speed = 10.0f;		 //Used primarly for vertical speed (up/down) motion; updated to 20 in Unity!
 	public int coinTotal = 0;
 	private Rigidbody rb;
 	private float vertical, horizontal;
