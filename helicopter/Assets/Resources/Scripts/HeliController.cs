@@ -5,6 +5,7 @@ public class HeliController : MonoBehaviour {
 
 	public float speed = 10.0f;		 //Used primarly for vertical speed (up/down) motion; updated to 20 in Unity!
 	public int coinTotal = 0;
+	public int gemTotal = 0;
 	private Rigidbody rb;
 	private float vertical, horizontal;
 	public ParticleSystem explosion;
@@ -53,11 +54,20 @@ public class HeliController : MonoBehaviour {
 		rb.velocity = new Vector3(horizontal, vertical, 0);
 	}
 
-	public void PickupCoin() {
+	public void PickupCoin() {							
 		coinTotal += 1;
 
 		// trigger audio playback and emit particles from particle system
 		GetComponents<AudioSource>()[0].Play();
+		GetComponent<ParticleSystem>().Play();
+	}
+
+	public void PickupGem() {					
+		gemTotal += 1;
+		coinTotal += 5;
+
+		// trigger audio playback and emit particles from particle system
+		GetComponents<AudioSource>()[1].Play();
 		GetComponent<ParticleSystem>().Play();
 	}
 
